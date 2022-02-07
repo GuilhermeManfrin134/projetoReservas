@@ -8,7 +8,7 @@ import './home.css';
 
 import api from '../../services/api';
 
-export default function Home(){
+export default function Home({ history }){
 
     const dispatch = useDispatch();
 
@@ -29,6 +29,7 @@ export default function Home(){
 
     function handleAdd(id){
         dispatch(addReserveRequest(id));
+
     }
 
     return(
