@@ -18,9 +18,16 @@ export function removeReserve(id){
     }
 }
 
-export function updateAmountReserve(id, amount){
+export function updateAmountRequest(id, amount){
     return {
-        type: 'UPDATE_RESERVE',
+        type: 'UPDATE_RESERVE_REQUEST',
+        id,
+        amount
+    }
+}
+export function updateAmountSucess(id, amount){
+    return {
+        type: 'UPDATE_RESERVE_SUCESS',
         id,
         amount
     }
