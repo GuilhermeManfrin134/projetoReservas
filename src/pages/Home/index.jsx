@@ -39,7 +39,7 @@ export default function Home({ history }){
                     <li key={trip.id}>
                         <img src={trip.image} alt={trip.title} />
                         <strong>{trip.title}</strong>
-                        <span>Status: {trip.status ? 'Disponivel' : 'Indisponivel'}</span>
+                        <span className="status">Status: {trip.status ? `Disponivel` : 'Indisponivel'}</span>
 
                         <button type="button" onClick={()=>handleAdd(trip.id)}>
                             <div><MdFlightTakeoff size={16} color="#FFF"/></div>

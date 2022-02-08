@@ -31,19 +31,21 @@ export default function Reservas(){
             {reserves.map(reserve => (
                 <div className="reservas" key={reserve.id}>
                     <img src={reserve.image} alt={reserve.title} />
-                    <strong>{reserve.title}</strong>
-                    <div id="amount">
-                        <button type="button" onClick={() => decrementAmount(reserve)}>
-                            <MdRemoveCircle size={25} color="#191919"/>
-                        </button>
-                            <input type="text" value={reserve.amount}/>
-                        <button type="button" onClick={() => incrementAmount(reserve)}>
-                            <MdAddCircle size={25} color="#191919"/>
+                    <div className="desc">
+                        <strong>{reserve.title}</strong>
+                        <div id="amount">
+                            <button type="button" onClick={() => decrementAmount(reserve)}>
+                                <MdRemoveCircle size={25} color="#36a76e"/>
+                            </button>
+                                <input type="text" value={reserve.amount}/>
+                            <button type="button" onClick={() => incrementAmount(reserve)}>
+                                <MdAddCircle size={25} color="#36a76e"/>
+                            </button>
+                        </div>
+                        <button type="button" onClick={()=> handleRemove(reserve.id)}>
+                            <MdDelete size={30} color="#36a76e"/>
                         </button>
                     </div>
-                    <button type="button" onClick={()=> handleRemove(reserve.id)}>
-                        <MdDelete size={20} color="#191919"/>
-                    </button>
                 </div>
             ))}
 

@@ -1,5 +1,5 @@
 .title{
-    color: #FFF;
+    color: #06361e;
 }
 
 .reservas{
@@ -8,15 +8,28 @@
     border-radius: 4px;
     background: #FFF;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    border: 2px solid #06361e;
 }
 
 .reservas img{
     max-height: 100px;
 }
 
-.reservas button{
+.reservas .desc{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+}
+
+.reservas .desc strong{
+    max-width: 180px;
+    text-align: center;
+}
+
+.reservas .desc button{
     border: 0;
     background: #FFF;
 }
@@ -29,18 +42,39 @@ footer button{
     border-radius: 4px;
     margin-top: 10px;
     font-weight: bold;
+    background: #36a76e;
+    color: #FFF;
+    border: 3px solid #06361e;
 }
 
-.reservas #amount{
+.reservas .desc #amount{
     display: flex;
     align-items: center;
 }
 
-.reservas #amount input{
+.reservas .desc #amount input{
     border: 1px solid #EEE;
     border-radius: 4px;
-    color: #242424;
+    color: #06361e;
     padding: 5px;
     width: 45px;
     text-align: center;
+}
+
+@media screen and (max-width: 700px){
+    .reservas{
+        flex-direction: column;
+    }
+    .reservas img{
+        width: 200px;
+
+    }
+    .reservas .desc{
+        margin-top: 40px;
+        justify-content: space-around;
+        flex-wrap: wrap-reverse;
+    }
+    .reservas .desc strong{
+        font-size: 12px;
+    }
 }

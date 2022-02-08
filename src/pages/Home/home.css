@@ -11,6 +11,7 @@
     background: #FFF;
     border-radius: 4px;
     padding: 13px;
+    border: 2px solid #06361e;
 }
 
 .box img{
@@ -26,14 +27,18 @@
     margin-top: 10px;
 }
 
+.status{
+    color: #06361e;
+}
+
 .box button{
     margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FFF;
-    background: #191919;
-    border: 0;
+    background: #36a76e;
+    border: 2px solid #06361e;
     border-radius: 4px;
 }
 
